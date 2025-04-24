@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft on CWD unblocked games</title>
+    <style>
+        /* Reset and general styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-rows: auto 1fr auto; /* Header, main content, footer */
+            height: 100vh; /* Full viewport height */
+            background-color: #000080;
+        }
+
+        /* Header styling */
+        header {
+            background-color: #8b0000;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        header h1 a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #8b0000;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        /* Main content styling */
+        main {
+            padding: 20px;
+            overflow-y: auto; /* Enable scrolling within this section */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Iframe styling */
+        .game-frame-container {
+            position: relative;
+            width: 80%; /* Adjust width as needed */
+            max-width: 800px; /* Limit the maximum width */
+            aspect-ratio: 16 / 9; /* Maintain 16:9 aspect ratio */
+            background-color: #1f1f1f;
+            border-radius: 10px;
+            overflow: hidden; /* Ensures rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Fullscreen button styling */
+        .fullscreen-btn {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .fullscreen-btn:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">CWD Unblocked Games</a></h1>
+    </header>
+    
+    <main>
+        <div class="game-frame-container">
+            <iframe src="https://eaglercraftx.pages.dev" title="Game"></iframe>
+        </div>
+        <button class="fullscreen-btn" onclick="toggleFullscreen()">Go Fullscreen</button>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 CWD inc</p> 
+        <a href="http://sites.google.com/view/itsc1">Home</a>
+    </footer>
+
+    <script>
+        function toggleFullscreen() {
+            const iframeContainer = document.querySelector('.game-frame-container');
+            if (iframeContainer.requestFullscreen) {
+                iframeContainer.requestFullscreen();
+            } else if (iframeContainer.webkitRequestFullscreen) { /* Safari */
+                iframeContainer.webkitRequestFullscreen();
+            } else if (iframeContainer.msRequestFullscreen) { /* IE11 */
+                iframeContainer.msRequestFullscreen();
+            }
+        }
+    </script>
+</body>
+</html>

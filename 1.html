@@ -53,13 +53,12 @@
 
         /* Iframe styling */
         .game-frame-container {
-            position: relative;
-            width: 80%; /* Adjust width as needed */
-            max-width: 800px; /* Limit the maximum width */
-            aspect-ratio: 16 / 9; /* Maintain 16:9 aspect ratio */
-            background-color: #1f1f1f; /* Can be adjusted if needed */
-            border-radius: 10px;
-            overflow: hidden;
+            width: 100%; /* Ensures full width */
+            max-width: 800px; /* Restricts maximum width */
+            height: 450px; /* Adjust the height to fit the blue section */
+            background-color: #1f1f1f; /* Provides contrast */
+            border-radius: 10px; /* Adds rounded corners */
+            overflow: hidden; /* Ensures clean edges */
         }
 
         iframe {
@@ -67,6 +66,22 @@
             height: 100%;
             border: none; /* Removes any borders */
             box-shadow: none; /* Removes shadows */
+        }
+
+        /* Fullscreen button styling */
+        .fullscreen-btn {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .fullscreen-btn:hover {
+            background-color: #3e8e41;
         }
     </style>
 </head>
@@ -79,6 +94,7 @@
         <div class="game-frame-container">
             <iframe src="1p.html" title="Game"></iframe>
         </div>
+        <button class="fullscreen-btn">Go Fullscreen</button>
     </main>
     
     <footer>

@@ -1,105 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minecraft on CWD Unblocked Games</title>
-    <link rel="icon" href="f.png" type="image/png">
-    <style>
-        /* Reset and general styling */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: grid;
-            grid-template-rows: auto 1fr auto; /* Header, main content, footer */
-            height: 100vh; /* Full viewport height */
-            background-color: #000080;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minecraft on CWD Unblocked Games</title>
+  <style>
+    /* General Reset and Layout Styling */
+    body {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      background-color: #000080;
+    }
 
-        /* Header styling */
-        header {
-            background-color: #8b0000;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            box-sizing: border-box;
-        }
+    /* Header Styling */
+    header {
+      background-color: #8b0000;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
 
-        header h1 a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.5rem;
-        }
+    header h1 a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
 
-        /* Footer styling */
-        footer {
-            background-color: #8b0000;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            box-sizing: border-box;
-        }
+    /* Footer Styling */
+    footer {
+      background-color: #8b0000;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      box-sizing: border-box;
+      flex-shrink: 0;
+    }
 
-        /* Main content styling */
-        main {
-            padding: 20px;
-            overflow-y: auto; /* Enable scrolling within this section */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
+    footer a {
+      color: white;
+      text-decoration: underline;
+    }
 
-        /* Iframe styling */
-        .game-frame-container {
-            width: 100%; /* Ensures full width */
-            max-width: 800px; /* Restricts maximum width */
-            height: 450px; /* Adjust the height to fit the blue section */
-            background-color: #1f1f1f; /* Provides contrast */
-            border-radius: 10px; /* Adds rounded corners */
-            overflow: hidden; /* Ensures clean edges */
-        }
-
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none; /* Removes any borders */
-            box-shadow: none; /* Removes shadows */
-        }
-
-        /* Fullscreen button styling */
-        .fullscreen-btn {
-            margin-top: 10px;
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-
-        .fullscreen-btn:hover {
-            background-color: #3e8e41;
-        }
-    </style>
+    /* Fullscreen Iframe Styling */
+    iframe {
+      flex-grow: 1;
+      width: 100%;
+      border: none;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1><a href="index.html">CWD Unblocked Games</a></h1>
-    </header>
-    
-    <main>
-        <div class="game-frame-container">
-            <iframe src="1p.html" title="Game"></iframe>
-        </div>
-        <button class="fullscreen-btn">Go Fullscreen</button>
-    </main>
-    
-    <footer>
-        <p>&copy; 2025 CWD inc</p> 
-        <a href="http://sites.google.com/view/itsc1">Home</a>
-    </footer>
+  <!-- Header Section -->
+  <header>
+    <h1><a href="index.html">CWD Unblocked Games</a></h1>
+  </header>
+
+  <!-- Fullscreen Iframe Section -->
+  <iframe src="1p.html" title="Embedded Content"></iframe>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 CWD Inc | <a href="main.html">Home</a></p>
+  </footer>
 </body>
 </html>

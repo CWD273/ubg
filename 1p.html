@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+        }
+        .dropdown {
+            margin-top: 20px;
+            display: inline-block;
+        }
+        select {
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dropdown">
+        <select onchange="navigateToPage(this.value)">
+            <option value="">Select a Version</option>
+            <option value="1.12js.html">1.12.2 (JS)</option>
+            <option value="1.12ws.html">1.12.2 (WASM)</option>
+            <option value="1.8js.html">1.8.8 (JS)</option>
+            <option value="1.8ws.html">1.8.8 (WASM)</option>
+            <option value="1.5.html">1.5.2 (JS)</option>
+        
+        </select>
+    </div>
+
+    <script>
+        function navigateToPage(url) {
+            if (url) {
+                window.location.href = url;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -93,16 +93,19 @@
     const header = document.getElementById('header');
     const footer = document.getElementById('footer');
     const iframe = document.getElementById('iframe');
+    let isFullscreen = false;
 
     toggleButton.addEventListener('click', () => {
-      if (header.style.display !== 'none') {
+      isFullscreen = !isFullscreen; // Toggle state
+
+      if (isFullscreen) {
         header.style.display = 'none';
         footer.style.display = 'none';
         iframe.style.flexGrow = '1';
       } else {
-        header.style.display = 'flex';
-        footer.style.display = 'flex';
-        iframe.style.flexGrow = '1';
+        header.style.display = ''; // Reset to default
+        footer.style.display = ''; // Reset to default
+        iframe.style.flexGrow = '';
       }
     });
   </script>

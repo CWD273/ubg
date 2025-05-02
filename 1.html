@@ -74,16 +74,15 @@
       position: absolute;
       top: 10px;
       right: 10px;
-      background-color: #ff4500;
-      color: white;
+      background: none; /* Remove default button styling */
       border: none;
-      padding: 5px 10px;
-      border-radius: 5px;
       cursor: pointer;
+      padding: 0;
     }
 
-    #toggleButton:hover {
-      background-color: #ff6347;
+    #toggleButton img {
+      width: 40px; /* Adjust size as needed */
+      height: auto;
     }
   </style>
 </head>
@@ -103,8 +102,10 @@
     <p>&copy; 2025 CWD Inc | <a href="main.html">Home</a></p>
   </footer>
 
-  <!-- Toggle Button -->
-  <button id="toggleButton">Toggle Fullscreen</button>
+  <!-- Toggle Button with Image -->
+  <button id="toggleButton">
+    <img src="btn.png" alt="Fullscreen Toggle">
+  </button>
 
   <script>
     const toggleButton = document.getElementById('toggleButton');
@@ -112,21 +113,25 @@
     const footer = document.getElementById('footer');
     const iframeContainer = document.getElementById('iframeContainer');
     const iframe = document.getElementById('iframe');
+    const buttonImage = toggleButton.querySelector('img'); // Select the image inside the button
     let isFullscreen = false;
 
     toggleButton.addEventListener('click', () => {
-      console.log("Toggling fullscreen mode..."); // Debugging log
+      console.log("Toggling fullscreen mode...");
       isFullscreen = !isFullscreen;
 
       iframeContainer.classList.toggle('fullscreen');
       header.classList.toggle('hidden');
       footer.classList.toggle('hidden');
 
+      // Change button image based on fullscreen state
+      buttonImage.src = isFullscreen ? 'btn1.png' : 'btn.png';
+
       // Restore focus to iframe after resizing
       setTimeout(() => {
         iframe.focus();
         iframe.contentWindow.focus();
-        console.log("Iframe refocused."); // Debugging log
+        console.log("Iframe refocused.");
       }, 100);
     });
   </script>

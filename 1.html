@@ -6,7 +6,6 @@
   <title>Minecraft on CWD Unblocked Games</title>
   <link rel="icon" href="f.png" type="image/png"> <!-- Favicon -->
   <style>
-    /* General Reset and Layout Styling */
     body {
       margin: 0;
       display: flex;
@@ -16,7 +15,6 @@
       background-color: #000080;
     }
 
-    /* Header Styling */
     header {
       background-color: #8b0000;
       color: white;
@@ -31,7 +29,6 @@
       font-size: 1.5rem;
     }
 
-    /* Footer Styling */
     footer {
       background-color: #8b0000;
       color: white;
@@ -46,7 +43,6 @@
       text-decoration: underline;
     }
 
-    /* Iframe Container for Fullscreen Adjustments */
     #iframeContainer {
       flex-grow: 1;
       width: 100%;
@@ -60,7 +56,6 @@
       border: none;
     }
 
-    /* Fullscreen Mode */
     .fullscreen {
       height: 100vh !important;
     }
@@ -69,40 +64,34 @@
       display: none !important;
     }
 
-    /* Button Styling */
     #toggleButton {
       position: absolute;
       top: 10px;
       right: 10px;
-      background: none; /* Remove default button styling */
+      background: none;
       border: none;
       cursor: pointer;
       padding: 0;
     }
 
     #toggleButton img {
-      width: 40px; /* Adjust size as needed */
+      width: 40px;
       height: auto;
     }
   </style>
 </head>
 <body>
-  <!-- Header Section -->
   <header id="header">
     <h1><a href="index.html">CWD Unblocked Games</a></h1>
   </header>
-
-  <!-- Iframe Container -->
   <div id="iframeContainer">
     <iframe src="1p.html" title="Embedded Content" id="iframe"></iframe>
   </div>
-
-  <!-- Footer Section -->
-  <footer id="footer">
-    <p>&copy; 2025 CWD Inc | <a href="main.html">Home</a></p>
-  </footer>
-
-  <!-- Toggle Button with Image -->
+   <footer>
+        <a href="/">
+          &copy; 2025 CWD Inc
+        </a>
+    </footer>
   <button id="toggleButton">
     <img src="fs.png" alt="Fullscreen Toggle">
   </button>
